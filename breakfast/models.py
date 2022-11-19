@@ -20,6 +20,8 @@ choices_rate = (
 
 
 class BreakFast(models.Model):
+    saler = models.ForeignKey(to='user_auth.User', on_delete=models.CASCADE)
+    address = models.TextField(blank=True, null=True)
     name = models.CharField(max_length=100, verbose_name='نام کالا')
     image = models.ImageField(upload_to='breakfast')
     price = models.IntegerField(verbose_name='قیمت کالا')
