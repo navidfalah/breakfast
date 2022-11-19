@@ -1,0 +1,101 @@
+{% extends 'base1/base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p style="font-family:yekan">کارنوکس</p>
+						<h1 style="font-family:yekan">ارتباط با ما</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	<!-- contact form -->
+	<div class="contact-from-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mb-5 mb-lg-0">
+					<div class="form-title">
+						<h2 style="font-family:yekan;text-align:right">سوالی داری؟</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ratione! Laboriosam est, assumenda. Perferendis, quo alias quaerat aliquid. Corporis ipsum minus voluptate? Dolore, esse natus!</p>
+					</div>
+				 	<div id="form_status"></div>
+					<div class="contact-form">
+						<form method="POST" style="direction: rtl">
+							{% csrf_token %}
+						
+							<div class="form-group" style="text-align: right">
+						  <label style="font-family: vazir;margin-left: 20px;text-align: right">
+									اسم شما
+								</label>
+							   {{ form.name }}
+					
+							</div>
+					
+							<div class="form-group" style="text-align: right">
+								<label style="font-family: vazir;margin-left: 20px">
+									متن شما
+								</label>
+									{{ form.content }}
+					
+							</div>
+					
+							<div class="form-group">
+					
+							  <button class="button-24" type="submit" style="font-family: yekan;width: 80%;margin-left: 10%;
+							  ">
+						 ارسال
+								<i class="fa-solid fa-arrow-right-to-bracket"></i>
+							  </button>
+							</div>
+					
+					
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="contact-form-wrap" >
+						<div class="contact-form-box" style="text-align:right">
+							<h4 style="font-family:yekan"><i class="fas fa-map"></i> آدرس ما</h4>
+							<p style="font-family:yekan">خانه ی نوآوری  </p>
+						</div>
+						<div class="contact-form-box" style="text-align:right">
+							<h4 style="font-family:yekan"><i class="far fa-clock"></i> ساعت پاسخ گویی</h4>
+							<p style="font-family:yekan">هر روز هفته 7 صبح تا 10 شب</p>
+						</div>
+						<div class="contact-form-box" style="text-align:right">
+							<h4 style="font-family:yekan"><i class="fas fa-address-book"></i> ارتباط با ما</h4>
+							<p style="font-family:yekan">تلفن 09903552689 </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end contact form -->
+
+	<!-- find our location -->
+	<div class="find-location blue-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<p style="font-family:yekan"> <i class="fas fa-map-marker-alt"></i> آدرس ما</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end find our location -->
+
+	<!-- google map section -->
+	<div class="embed-responsive embed-responsive-21by9">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d275.5410783340943!2d51.391636646222864!3d35.70708337387503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e011fa0ace539%3A0x69f3585d1a22253e!2sInnovation%20House!5e0!3m2!1sen!2s!4v1656486268513!5m2!1sen!2s" width="1821" height="780" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	</div>
+	<!-- end google map section -->
+
+{% endblock %}
